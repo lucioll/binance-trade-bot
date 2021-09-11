@@ -33,6 +33,7 @@ def main():
     logger.info("Creating database schema if it doesn't already exist")
     db.create_database()
 
+    logger.info(f"Supported coin list:  {config.SUPPORTED_COIN_LIST}")
     db.set_coins(config.SUPPORTED_COIN_LIST)
     db.migrate_old_state()
 

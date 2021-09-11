@@ -27,8 +27,8 @@ class MockBinanceManager(BinanceAPIManager):
     ):
         super().__init__(config, db, logger)
         self.config = config
-        self.datetime = start_date or datetime(2021, 1, 1)
-        self.balances = start_balances or {config.BRIDGE.symbol: 100}
+        self.datetime = start_date or datetime(2021, 6, 1)
+        self.balances = start_balances or {config.BRIDGE.symbol: 5}
 
     def setup_websockets(self):
         pass  # No websockets are needed for backtesting
